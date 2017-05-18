@@ -1,0 +1,3 @@
+note="$(termux-dialog -i "note name")"
+mkdir -p ~/notes
+vim ~/notes/"$note"
