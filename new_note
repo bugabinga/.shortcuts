@@ -1,3 +1,9 @@
 note="$(termux-dialog -i "note name")"
 mkdir -p ~/notes
 vim ~/notes/"$note"
+cd ~/notes
+if [ -f "$note" ]; then
+  git add "$note"
+  git commit -m "Added new note '$note'."
+  git push origin master
+fi
